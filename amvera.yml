@@ -1,0 +1,14 @@
+﻿meta:
+  environment: csharp
+  toolchain:
+    name: dotnet
+    version: 8.0
+
+build:
+  image: mcr.microsoft.com/dotnet/sdk:8.0
+
+run:
+  image: mcr.microsoft.com/dotnet/sdk:8.0
+  buildFileName: bin/WebApplication1   # имя без расширения, совпадает с именем проекта
+  persistenceMount: /data
+  containerPort: 8080
